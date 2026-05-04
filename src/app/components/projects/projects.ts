@@ -50,7 +50,7 @@ export class Projects {
       description: 'A fullstack personal portfolio site featuring an AI-powered assistant that answers questions about me, a community forum for open discussion, and a clean modern UI built from scratch.',
       tags: ['Angular', 'TypeScript', 'C#', 'ASP.NET Core', 'SQL Server', 'Claude AI', 'SCSS'],
       liveUrl: '#',
-      githubUrl: 'https://github.com/bward021/portfolio-api',
+      githubUrl: 'https://github.com/bward021/portfolio-frontend',
       status: 'live',
       highlight: true
     },
