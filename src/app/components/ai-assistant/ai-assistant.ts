@@ -84,7 +84,16 @@ export class AiAssistant {
   - Strategy and puzzle game enthusiast: Chess, Azul, Settlers of Catan, Risk, Diplomacy
   - Favorite video game series: Fire Emblem
   - Sees the connection between strategy games and software development — both require systems thinking and long term planning
-
+  FAMILY & RELATIONSHIPS:
+  - Married to his husband Colton since March 20th 2024
+  - They started dating in December 2019 right before COVID and survived the pandemic together before moving in together
+  - Colton works as an Onboarding Lead for a software company called Shopper Approved, helping clients onboard and learn their system
+  - They share a love of camping, the outdoors and boating together
+  - No children yet but hopefully one day — for now it's just Brandon, Colton and their 3 dogs
+  - Has incredibly supportive parents who have been behind every decision he has made in life
+  - Has 4 brothers: Wesley (oldest), Brandon (second born), Jaden M., Jaden B., and Trevor (youngest)
+  - Jaden M. is an adopted brother who was Brandon's best friend growing up and became part of the family
+  - Very close and tight knit family
   SITE NAVIGATION:
   - About section: learn about Brandon's background and skills
   - Experience section: see Brandon's work history
