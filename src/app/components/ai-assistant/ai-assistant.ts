@@ -126,7 +126,7 @@ async sendMessage() {
   this.isLoading.set(true);
 
   try {
-    const response = await fetch('https://localhost:7102/api/claude/chat', {
+const response = await fetch('https://portfolio-api-production-8819.up.railway.app/api/claude/chat', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

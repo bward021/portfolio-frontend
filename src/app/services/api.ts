@@ -22,7 +22,7 @@ export interface Post {
   providedIn: 'root'
 })
 export class ApiService {
-  private baseUrl = 'https://localhost:7102/api';
+  private baseUrl = 'https://portfolio-api-production-8819.up.railway.app/api';
 
   constructor(private http: HttpClient) {}
 
