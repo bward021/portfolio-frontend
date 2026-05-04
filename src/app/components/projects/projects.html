@@ -1,0 +1,31 @@
+<section class="projects" id="projects">
+  <h2 class="section-title">Projects</h2>
+  <p class="section-subtitle">Professional work and personal projects I've built.</p>
+  <div class="projects-grid">
+    <div 
+      class="project-card" 
+      *ngFor="let project of projects"
+      [class.highlight]="project.highlight"
+      [class.coming-soon]="project.status === 'coming-soon'">
+      
+      <div class="project-header">
+        <span class="project-status" 
+          [class.live]="project.status === 'live'"
+          [class.professional]="project.status === 'professional'">
+          {{ project.status === 'live' ? '🟢 Live' : project.status === 'professional' ? '💼 Professional' : '🔜 Coming Soon' }}
+        </span>
+        <div class="project-links" *ngIf="project.status === 'live'">
+          <a [href]="project.githubUrl" target="_blank" title="GitHub">⌥ GitHub</a>
+          <a [href]="project.liveUrl" target="_blank" title="Live Site">🔗 Live</a>
+        </div>
+      </div>
+
+      <h3 class="project-title">{{ project.title }}</h3>
+      <p class="project-description">{{ project.description }}</p>
+
+      <div class="project-tags" *ngIf="project.tags.length > 0">
+        <span class="tag" *ngFor="let tag of project.tags">{{ tag }}</span>
+      </div>
+    </div>
+  </div>
+</section>

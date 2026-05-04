@@ -1,0 +1,78 @@
+<section class="forum" id="forum">
+  <h2 class="section-title">Community Forum</h2>
+  <p class="section-subtitle">Leave a message, ask a question, or just say hi! 👋</p>
+
+  <div class="forum-new-post">
+    <h3>Start a Discussion</h3>
+    <div class="form-group">
+      <input
+        type="text"
+        placeholder="Your name"
+        [(ngModel)]="newPost.username"
+        class="forum-input" />
+    </div>
+    <div class="form-group">
+      <textarea
+        placeholder="What's on your mind?"
+        [(ngModel)]="newPost.content"
+        class="forum-textarea"
+        rows="4"></textarea>
+    </div>
+    <button class="btn-primary" (click)="submitPost()">Post</button>
+  </div>
+
+ <div class="forum-error" *ngIf="error && !isLoading">{{ error }}</div>
+
+  <div class="forum-loading" *ngIf="isLoading">
+    <p>Loading posts...</p>
+  </div>
+
+  <div class="forum-posts" *ngIf="!isLoading">
+    <div class="forum-empty" *ngIf="posts.length === 0">
+      <p>No posts yet — be the first to start a discussion! 🚀</p>
+    </div>
+
+    <div class="post-card" *ngFor="let post of posts">
+      <div class="post-header">
+        <div class="post-avatar">{{ post.username.charAt(0).toUpperCase() }}</div>
+        <div class="post-meta">
+          <span class="post-username">{{ post.username }}</span>
+          <span class="post-date">{{ post.createdAt | date:'MMM d, y · h:mm a' }}</span>
+        </div>
+      </div>
+      <p class="post-content">{{ post.content }}</p>
+
+      <div class="post-replies" *ngIf="post.replies.length > 0">
+        <div class="reply-card" *ngFor="let reply of post.replies">
+          <div class="post-header">
+            <div class="post-avatar reply-avatar">{{ reply.username.charAt(0).toUpperCase() }}</div>
+            <div class="post-meta">
+              <span class="post-username">{{ reply.username }}</span>
+              <span class="post-date">{{ reply.createdAt | date:'MMM d, y · h:mm a' }}</span>
+            </div>
+          </div>
+          <p class="post-content">{{ reply.content }}</p>
+        </div>
+      </div>
+
+      <button class="reply-btn" (click)="toggleReply(post.id)">
+        💬 {{ replyInputs[post.id]?.show ? 'Cancel' : 'Reply' }}
+        <span *ngIf="post.replies.length > 0">({{ post.replies.length }})</span>
+      </button>
+
+      <div class="reply-form" *ngIf="replyInputs[post.id]?.show">
+        <input
+          type="text"
+          placeholder="Your name"
+          [(ngModel)]="replyInputs[post.id].username"
+          class="forum-input" />
+        <textarea
+          placeholder="Write a reply..."
+          [(ngModel)]="replyInputs[post.id].content"
+          class="forum-textarea"
+          rows="3"></textarea>
+        <button class="btn-primary" (click)="submitReply(post.id)">Submit Reply</button>
+      </div>
+    </div>
+  </div>
+</section>

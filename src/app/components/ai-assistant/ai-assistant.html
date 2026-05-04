@@ -1,0 +1,54 @@
+<div class="ai-overlay" *ngIf="isOpen()" (click)="toggleChat()"></div>
+<div class="ai-widget">
+  <button class="ai-toggle" (click)="toggleChat()" [class.open]="isOpen()">
+    <span class="ai-toggle-icon">{{ isOpen() ? '✕' : '🤖' }}</span>
+    <span class="ai-toggle-label" *ngIf="!isOpen()">Ask about me</span>
+  </button>
+
+  <div class="ai-chat" *ngIf="isOpen()">
+    <div class="ai-header">
+      <div class="ai-header-info">
+        <span class="ai-avatar">🤖</span>
+        <div>
+          <p class="ai-name">Brandon's AI Assistant</p>
+          <p class="ai-status">Ask me anything!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ai-messages">
+      <div 
+        class="ai-message" 
+        *ngFor="let message of messages()"
+        [class.user]="message.role === 'user'"
+        [class.assistant]="message.role === 'assistant'">
+        <span class="message-avatar" *ngIf="message.role === 'assistant'">🤖</span>
+          <div class="message-bubble"><markdown [data]="message.content"></markdown></div>
+        <span class="message-avatar user-avatar" *ngIf="message.role === 'user'">👤</span>
+      </div>
+
+      <div class="ai-message assistant" *ngIf="isLoading()">
+        <span class="message-avatar">🤖</span>
+        <div class="message-bubble typing">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="ai-input-area">
+      <input 
+        type="text"
+        class="ai-input"
+        placeholder="Ask about Brandon..."
+        [(ngModel)]="userInput"
+        (keydown)="onKeyDown($event)"
+        [disabled]="isLoading()">
+      <button 
+        class="ai-send" 
+        (click)="sendMessage()"
+        [disabled]="isLoading() || !userInput.trim()">
+        ➤
+      </button>
+    </div>
+  </div>
+</div>

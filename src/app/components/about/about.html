@@ -1,0 +1,42 @@
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-text">
+      <h2 class="section-title">About Me</h2>
+      <p>I'm a fullstack software engineer with a passion for building clean, performant web applications. I love working across the entire stack — from designing database schemas to crafting pixel-perfect UIs.</p>
+      <p>I thrive in collaborative environments and enjoy solving complex problems with simple, maintainable solutions. When I'm not coding I'm attending local dev meetups and continuously leveling up my skills.</p>
+      <p>I'm currently <span class="highlight">open to new opportunities</span> and would love to find a team where I can make a real impact.</p>
+    </div>
+
+    <div class="about-skills">
+      <div class="skill-category">
+        <h3>💪 Proficient</h3>
+        <div class="skills-grid">
+          <div class="skill-item proficient" *ngFor="let skill of proficient">
+            <span class="skill-icon">{{ skill.icon }}</span>
+            <span class="skill-name">{{ skill.name }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>🌱 Familiar With</h3>
+        <div class="skills-grid">
+          <div class="skill-item familiar" *ngFor="let skill of familiar">
+            <span class="skill-icon">{{ skill.icon }}</span>
+            <span class="skill-name">{{ skill.name }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <h3>📚 Academic Experience</h3>
+        <div class="skills-grid">
+          <div class="skill-item academic" *ngFor="let skill of academic">
+            <span class="skill-icon">{{ skill.icon }}</span>
+            <span class="skill-name">{{ skill.name }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
