@@ -10,7 +10,7 @@
       
       <div class="project-header">
         <span class="project-status" >
-          <i class="fas" [class.fa-circle-check]="project.status === 'live'" 
+          <i class="fas" [class.fa-circle-check]="project.status === 'live'" [class.live]="project.status === 'live'" 
             [class.fa-briefcase]="project.status === 'professional'"
             [class.fa-clock]="project.status === 'coming-soon'"></i>
           {{ project.status === 'live' ? 'Live' : project.status === 'professional' ? 'Professional' : 'Coming Soon' }}

@@ -30,6 +30,7 @@ export class About {
     { name: 'AWS', icon: 'fa-brands fa-aws' },
     { name: 'Azure DevOps', icon: 'fa-brands fa-microsoft' },
     { name: 'API Integration', icon: 'fa-solid fa-plug' },
+    { name: 'PostgreSQL', icon: 'fa-solid fa-database' },
   ];
 
   academic = [
