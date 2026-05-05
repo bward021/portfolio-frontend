@@ -1,6 +1,6 @@
 <section class="forum" id="forum">
   <h2 class="section-title">Community Forum</h2>
-  <p class="section-subtitle">Leave a message, ask a question, or just say hi! 👋</p>
+  <p class="section-subtitle"><i class="fas fa-hand"></i> Leave a message, ask a question, or just say hi!</p>
 
   <div class="forum-new-post">
     <h3>Start a Discussion</h3>
@@ -29,7 +29,7 @@
 
   <div class="forum-posts" *ngIf="!isLoading">
     <div class="forum-empty" *ngIf="posts.length === 0">
-      <p>No posts yet — be the first to start a discussion! 🚀</p>
+      <p><i class="fas fa-rocket"></i> No posts yet — be the first to start a discussion!</p>
     </div>
 
     <div class="post-card" *ngFor="let post of posts">
@@ -56,7 +56,7 @@
       </div>
 
       <button class="reply-btn" (click)="toggleReply(post.id)">
-        💬 {{ replyInputs[post.id]?.show ? 'Cancel' : 'Reply' }}
+        <i class="fas fa-reply"></i> {{ replyInputs[post.id]?.show ? 'Cancel' : 'Reply' }}
         <span *ngIf="post.replies.length > 0">({{ post.replies.length }})</span>
       </button>
 
