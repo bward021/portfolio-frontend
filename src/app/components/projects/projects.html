@@ -9,14 +9,17 @@
       [class.coming-soon]="project.status === 'coming-soon'">
       
       <div class="project-header">
-        <span class="project-status" 
-          [class.live]="project.status === 'live'"
-          [class.professional]="project.status === 'professional'">
-          {{ project.status === 'live' ? '🟢 Live' : project.status === 'professional' ? '💼 Professional' : '🔜 Coming Soon' }}
+        <span class="project-status" >
+          <i class="fas" [class.fa-circle-check]="project.status === 'live'" 
+            [class.fa-briefcase]="project.status === 'professional'"
+            [class.fa-clock]="project.status === 'coming-soon'"></i>
+          {{ project.status === 'live' ? 'Live' : project.status === 'professional' ? 'Professional' : 'Coming Soon' }}
         </span>
         <div class="project-links" *ngIf="project.status === 'live'">
           <a [href]="project.githubUrl" target="_blank" title="GitHub">⌥ GitHub</a>
-          <a [href]="project.liveUrl" target="_blank" title="Live Site">🔗 Live</a>
+          @if(project.liveUrl != null){
+            <a [href]="project.liveUrl" target="_blank" title="Live Site">🔗 Live</a>
+          }
         </div>
       </div>
 
