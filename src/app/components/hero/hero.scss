@@ -59,15 +59,6 @@
     font-size: 0.9rem;
     color: var(--primary);
     width: fit-content;
-
-    &::before {
-      content: '';
-      width: 8px;
-      height: 8px;
-      background: #00e676;
-      border-radius: 50%;
-      animation: pulse 2s infinite;
-    }
   }
 }
 

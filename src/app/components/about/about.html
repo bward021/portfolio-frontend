@@ -12,7 +12,7 @@
         <h3>💪 Proficient</h3>
         <div class="skills-grid">
           <div class="skill-item proficient" *ngFor="let skill of proficient">
-            <span class="skill-icon">{{ skill.icon }}</span>
+            <i [class]="'skill-icon ' + skill.icon"></i>
             <span class="skill-name">{{ skill.name }}</span>
           </div>
         </div>
@@ -22,7 +22,7 @@
         <h3>🌱 Familiar With</h3>
         <div class="skills-grid">
           <div class="skill-item familiar" *ngFor="let skill of familiar">
-            <span class="skill-icon">{{ skill.icon }}</span>
+            <i [class]="'skill-icon ' + skill.icon"></i>
             <span class="skill-name">{{ skill.name }}</span>
           </div>
         </div>
@@ -32,7 +32,7 @@
         <h3>📚 Academic Experience</h3>
         <div class="skills-grid">
           <div class="skill-item academic" *ngFor="let skill of academic">
-            <span class="skill-icon">{{ skill.icon }}</span>
+            <i [class]="'skill-icon ' + skill.icon"></i>
             <span class="skill-name">{{ skill.name }}</span>
           </div>
         </div>

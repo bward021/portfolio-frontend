@@ -58,7 +58,11 @@
   gap: 10px;
   align-items: start;
 }
-
+.skill-icon {
+  font-size: 1.2rem;
+  width: 20px;
+  text-align: center;
+}
 .skill-item {
   background: var(--bg-card);
   border: 1px solid var(--border);

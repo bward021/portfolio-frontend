@@ -9,35 +9,34 @@ import { NgFor } from '@angular/common';
 })
 export class About {
   proficient = [
-    { name: 'C#', icon: '💜' },
-    { name: 'ASP.NET Core', icon: '🔷' },
-    { name: 'LINQ', icon: '🔗' },
-    { name: 'Angular', icon: '🅰️' },
-    { name: 'TypeScript', icon: '📘' },
-    { name: 'JavaScript', icon: '💛' },
-    { name: 'SQL', icon: '🗄️' },
-    { name: 'HTML5', icon: '🌐' },
-    { name: 'CSS / SCSS', icon: '🎨' },
-    { name: 'RxJS', icon: '⚡' },
-    { name: 'jQuery', icon: '💲' },
-    { name: 'KnockoutJS', icon: '🥊' },
-    { name: 'MVC ', icon: '🏗️' },
-    { name: 'Git / GitHub', icon: '🔀' },
-    { name: 'API Integration', icon: '🔌' },
-    { name: 'Agile / Scrum', icon: '🔄' },
+    { name: 'C#', icon: 'fa-brands fa-microsoft' },
+    { name: 'ASP.NET Core', icon: 'fa-solid fa-server' },
+    { name: 'LINQ', icon: 'fa-solid fa-database' },
+    { name: 'Angular', icon: 'fa-brands fa-angular' },
+    { name: 'TypeScript', icon: 'fa-brands fa-js' },
+    { name: 'JavaScript', icon: 'fa-brands fa-js' },
+    { name: 'SQL', icon: 'fa-solid fa-table' },
+    { name: 'HTML5', icon: 'fa-brands fa-html5' },
+    { name: 'CSS / SCSS', icon: 'fa-brands fa-css3-alt' },
+    { name: 'RxJS', icon: 'fa-solid fa-rotate' },
+    { name: 'jQuery', icon: 'fa-solid fa-code' },
+    { name: 'KnockoutJS', icon: 'fa-solid fa-layer-group' },
+    { name: 'Git / GitHub', icon: 'fa-brands fa-github' },
+    { name: 'Agile / Scrum', icon: 'fa-solid fa-arrows-spin' },
   ];
 
   familiar = [
-    { name: 'CI/CD Pipelines', icon: '🚀' },
-    { name: 'AWS', icon: '☁️' },
-    { name: 'Azure DevOps', icon: '🔵' },
+    { name: 'CI/CD Pipelines', icon: 'fa-solid fa-gears' },
+    { name: 'AWS', icon: 'fa-brands fa-aws' },
+    { name: 'Azure DevOps', icon: 'fa-brands fa-microsoft' },
+    { name: 'API Integration', icon: 'fa-solid fa-plug' },
   ];
 
   academic = [
-    { name: 'React', icon: '⚛️' },
-    { name: 'Python', icon: '🐍' },
-    { name: 'MongoDB', icon: '🍃' },
-    { name: 'Express', icon: '🚂' },
-    { name: 'C++', icon: '⚙️' },
+    { name: 'React', icon: 'fa-brands fa-react' },
+    { name: 'Python', icon: 'fa-brands fa-python' },
+    { name: 'MongoDB', icon: 'fa-solid fa-leaf' },
+    { name: 'Express', icon: 'fa-brands fa-node-js' },
+    { name: 'C++', icon: 'fa-solid fa-c' },
   ];
 }

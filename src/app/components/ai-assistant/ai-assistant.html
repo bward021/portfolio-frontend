@@ -1,14 +1,14 @@
 <div class="ai-overlay" *ngIf="isOpen()" (click)="toggleChat()"></div>
 <div class="ai-widget">
   <button class="ai-toggle" (click)="toggleChat()" [class.open]="isOpen()">
-    <span class="ai-toggle-icon">{{ isOpen() ? '✕' : '🤖' }}</span>
+    <i class="fas" [class.fa-bolt]="!isOpen()" [class.fa-times]="isOpen()"></i>
     <span class="ai-toggle-label" *ngIf="!isOpen()">Ask about me</span>
   </button>
 
   <div class="ai-chat" *ngIf="isOpen()">
     <div class="ai-header">
       <div class="ai-header-info">
-        <span class="ai-avatar">🤖</span>
+        <i class="fas fa-bolt ai-avatar"></i>
         <div>
           <p class="ai-name">Brandon's AI Assistant</p>
           <p class="ai-status">Ask me anything!</p>
@@ -22,9 +22,9 @@
         *ngFor="let message of messages()"
         [class.user]="message.role === 'user'"
         [class.assistant]="message.role === 'assistant'">
-        <span class="message-avatar" *ngIf="message.role === 'assistant'">🤖</span>
+          <i class="fas fa-bolt message-avatar" *ngIf="message.role === 'assistant'"></i>
           <div class="message-bubble"><markdown [data]="message.content"></markdown></div>
-        <span class="message-avatar user-avatar" *ngIf="message.role === 'user'">👤</span>
+          <i class="fas fa-user message-avatar user-avatar" *ngIf="message.role === 'user'"></i>
       </div>
 
       <div class="ai-message assistant" *ngIf="isLoading()">
