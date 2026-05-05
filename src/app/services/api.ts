@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 export interface Reply {
   id: number;
@@ -22,7 +23,7 @@ export interface Post {
   providedIn: 'root'
 })
 export class ApiService {
-  private baseUrl = 'https://portfolio-api-production-8819.up.railway.app/api';
+  private baseUrl = `${environment.apiUrl}/api`;
 
   constructor(private http: HttpClient) {}
 
@@ -36,5 +37,9 @@ export class ApiService {
 
   createReply(postId: number, username: string, content: string): Observable<Reply> {
     return this.http.post<Reply>(`${this.baseUrl}/posts/${postId}/replies`, { username, content });
+  }
+
+  sendContactEmail(name: string, email: string, message: string): Observable<any> {
+    return this.http.post(`${this.baseUrl}/contact`, { name, email, message });
   }
 }

@@ -2,7 +2,7 @@ import { Component, signal, ViewChild, ElementRef, AfterViewChecked } from '@ang
 import { NgFor, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MarkdownComponent } from 'ngx-markdown';
-
+import { environment } from '../../../environments/environment';
 interface Message {
   role: 'user' | 'assistant';
   content: string;
@@ -135,7 +135,7 @@ async sendMessage() {
   this.isLoading.set(true);
 
   try {
-const response = await fetch('https://portfolio-api-production-8819.up.railway.app/api/claude/chat', {
+    const response = await fetch(`${environment.apiUrl}/api/claude/chat`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
