@@ -29,7 +29,7 @@ export class Projects {
     },
     {
       title: 'Application & Hiring System',
-      description: 'A dynamic hiring platform where end users build custom job applications, track applicants through the hiring pipeline, create interview questions, and begin the onboarding process — all from a single interface.',
+      description: 'A dynamic hiring platform where end users build custom job applications, track applicants through the hiring pipeline, create interview questions, and begin the onboarding process, all from a single interface.',
       tags: ['Angular', 'C#', 'ASP.NET Core', 'SQL', 'LINQ', 'MVC'],
       liveUrl: null,
       githubUrl: null,
@@ -55,7 +55,7 @@ export class Projects {
       highlight: true
     },{
       title: 'Spectral - ABA Therapy Tracker',
-      description: 'My capstone project at Bottega Tech. A fullstack ABA therapy management platform for tracking client behavioral data in real time. Features discrete trial, frequency, and duration data collection, client and employee management, and dynamic charting. Recently modernized from MySQL to PostgreSQL, upgraded to React 19, and fully redesigned with a custom dark/light mode UI. Demo login — Email: admin@spectral.com Password: admin123',
+      description: 'My capstone project at Bottega Tech. A fullstack ABA therapy management platform for tracking client behavioral data in real time. Features discrete trial, frequency, and duration data collection, client and employee management, and dynamic charting. Recently modernized from MySQL to PostgreSQL, upgraded to React 19, and fully redesigned with a custom dark/light mode UI. Demo login - Email: admin@spectral.com Password: admin123',
       tags: ['React', 'Python', 'Flask', 'PostgreSQL', 'SQLAlchemy', 'Chart.js', 'SCSS'],
       liveUrl: 'https://bw-spectral-rfe.netlify.app/',
       githubUrl: 'https://github.com/bward021/spectral-fe-react',
