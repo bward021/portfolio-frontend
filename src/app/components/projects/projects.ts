@@ -53,6 +53,14 @@ export class Projects {
       githubUrl: 'https://github.com/bward021/portfolio-frontend',
       status: 'live',
       highlight: true
+    },{
+      title: 'Spectral - ABA Therapy Tracker',
+      description: 'My capstone project at Bottega Tech. A fullstack ABA therapy management platform for tracking client behavioral data in real time. Features discrete trial, frequency, and duration data collection, client and employee management, and dynamic charting. Recently modernized from MySQL to PostgreSQL, upgraded to React 19, and fully redesigned with a custom dark/light mode UI.',
+      tags: ['React', 'Python', 'Flask', 'PostgreSQL', 'SQLAlchemy', 'Chart.js', 'SCSS'],
+      liveUrl: 'https://bw-spectral-rfe.netlify.app/',
+      githubUrl: 'https://github.com/bward021/spectral-fe-react',
+      status: 'live',
+      highlight: true
     },
     {
       title: 'Coming Soon',
