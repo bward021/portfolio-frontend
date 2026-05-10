@@ -12,7 +12,7 @@ export class Projects {
     {
       title: 'OptoMiser Practice Management System',
       description: 'Enterprise-scale healthcare practice management platform covering accounting, medical notes, insurance management, billing, client portal, and HR portal. Joined an active production team to build new features, resolve bugs, and maintain a HIPAA-compliant codebase serving real clinical users daily. Delivered 10+ complete features end-to-end, improved multiple query performances by 15%+, and modernized legacy ASPX forms to current technologies including KnockoutJS and Angular.',
-      tags: ['C#', 'ASP.NET Core', 'KnockoutJS', 'Angular', 'SQL', 'LINQ', 'HIPAA'],
+      tags: ['C#', 'ASP.NET Core', 'KnockoutJS', 'Angular', 'SQL', 'LINQ', 'HIPAA', 'AWS'],
       liveUrl: null,
       githubUrl: null,
       status: 'professional',
