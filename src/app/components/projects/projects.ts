@@ -10,6 +10,15 @@ import { NgFor, NgIf } from '@angular/common';
 export class Projects {
   projects = [
     {
+      title: 'OptoMiser Practice Management System',
+      description: 'Enterprise-scale healthcare practice management platform covering accounting, medical notes, insurance management, billing, client portal, and HR portal. Joined an active production team to build new features, resolve bugs, and maintain a HIPAA-compliant codebase serving real clinical users daily. Delivered 10+ complete features end-to-end, improved multiple query performances by 15%+, and modernized legacy ASPX forms to current technologies including KnockoutJS and Angular.',
+      tags: ['C#', 'ASP.NET Core', 'KnockoutJS', 'Angular', 'SQL', 'LINQ', 'HIPAA'],
+      liveUrl: null,
+      githubUrl: null,
+      status: 'professional',
+      highlight: true
+    },
+    {
       title: 'Support Ticket System',
       description: 'A full enterprise support ticket platform built from scratch. End users submit bugs, feature requests and questions via a MVC/KnockoutJS frontend. Internal management system built in Angular with a two-way GitHub integration that creates issues and pulls back live status, assignee and progress data. Includes a rich messaging system, image uploads, metrics dashboard, expandable cards, and email/SMS alerts based on user permissions.',
       tags: ['Angular', 'KnockoutJS', 'C#', 'ASP.NET Core', 'SQL', 'GitHub API', 'MVC', 'LINQ'],
