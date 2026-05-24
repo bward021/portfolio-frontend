@@ -6,7 +6,6 @@ import { Projects } from './components/projects/projects';
 import { Forum } from './components/forum/forum';
 import { AiAssistant } from './components/ai-assistant/ai-assistant';
 import { Contact } from './components/contact/contact';
-import { provideHttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',

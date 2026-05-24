@@ -127,6 +127,10 @@
   &.professional {
     color: var(--accent);
   }
+
+  &.in-development {
+    color: #ffb74d;
+  }
 }
 .live {
     color: #00e676;

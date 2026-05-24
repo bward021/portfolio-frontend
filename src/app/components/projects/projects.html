@@ -9,14 +9,17 @@
       [class.coming-soon]="project.status === 'coming-soon'">
       
       <div class="project-header">
-        <span class="project-status" >
-          <i class="fas" [class.fa-circle-check]="project.status === 'live'" [class.live]="project.status === 'live'" 
+        <span class="project-status" [class.in-development]="project.status === 'in-development'">
+          <i class="fas" [class.fa-circle-check]="project.status === 'live'" [class.live]="project.status === 'live'"
             [class.fa-briefcase]="project.status === 'professional'"
+            [class.fa-code]="project.status === 'in-development'"
             [class.fa-clock]="project.status === 'coming-soon'"></i>
-          {{ project.status === 'live' ? 'Live' : project.status === 'professional' ? 'Professional' : 'Coming Soon' }}
+          {{ project.status === 'live' ? 'Live' : project.status === 'professional' ? 'Professional' : project.status === 'in-development' ? 'In Development' : 'Coming Soon' }}
         </span>
-        <div class="project-links" *ngIf="project.status === 'live'">
-          <a [href]="project.githubUrl" target="_blank" title="GitHub">⌥ GitHub</a>
+        <div class="project-links" *ngIf="project.githubUrl || project.liveUrl">
+          @if(project.githubUrl != null){
+            <a [href]="project.githubUrl" target="_blank" title="GitHub">⌥ GitHub</a>
+          }
           @if(project.liveUrl != null){
             <a [href]="project.liveUrl" target="_blank" title="Live Site">🔗 Live</a>
           }

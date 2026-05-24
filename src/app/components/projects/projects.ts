@@ -72,6 +72,24 @@ export class Projects {
       highlight: true
     },
     {
+      title: 'Cairn - Community for Autism Parents',
+      description: 'A calm-by-design community platform for parents of autistic children, with autistic adults welcomed as peers. Better Auth (email/password + Google OAuth) with adults-only attestation enforced at the database boundary, threaded posts with R2 image attachments and a five-reaction set surfaced via natural-language reactor lines, report-with-reason moderation with banned-term and crisis-signal scanners, friction-gated 1:1 DMs that require mutual engagement, topic/age/region groups with scoped moderators, in-context language nudges that link to long-form explainers, and an admin broadcast composer with per-recipient personalization. Polling-based real-time, deliberately — no WebSockets.',
+      tags: ['Next.js', 'React 19', 'TypeScript', 'Prisma', 'PostgreSQL', 'Better Auth', 'Cloudflare R2', 'Upstash Redis', 'Resend', 'Vercel'],
+      liveUrl: 'https://cairn.community',
+      githubUrl: 'https://github.com/bward021/cairn',
+      status: 'live',
+      highlight: true
+    },
+    {
+      title: 'PDF Editor - HIPAA-Compliant Forms Platform',
+      description: 'A HIPAA-compliant web platform for uploading PDFs, defining fillable fields, and collecting submissions via auto-generated HTML forms. Built on AWS BAA-covered services only (Cognito + MFA, S3 + KMS, RDS, Lambda, SES, CloudWatch) with per-action audit logging, infrastructure-as-code via AWS CDK in C#, and synthetic-only PHI in development. Role-based access for Admin, Supervisor, BCBA, QIDP, RN, and DSP personas, each with dashboards scoped to their workflow.',
+      tags: ['Angular', 'TypeScript', 'ASP.NET Core', 'C#', 'EF Core', 'PostgreSQL', 'AWS CDK', 'pdf-lib', 'HIPAA', 'Tailwind'],
+      liveUrl: null,
+      githubUrl: 'https://github.com/bward021/pdf-editor',
+      status: 'in-development',
+      highlight: true
+    },
+    {
       title: 'Coming Soon',
       description: 'A new project is currently in the works. Check back soon!',
       tags: [],
