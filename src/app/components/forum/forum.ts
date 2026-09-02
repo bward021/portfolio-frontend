@@ -1,5 +1,5 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
-import { NgFor, NgIf, DatePipe } from '@angular/common';
+import { Component, OnInit, ChangeDetectorRef, Inject, PLATFORM_ID } from '@angular/core';
+import { NgFor, NgIf, DatePipe, isPlatformBrowser } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ApiService, Post } from '../../services/api';
 
@@ -17,10 +17,18 @@ export class Forum implements OnInit {
   newPost = { username: '', content: '' };
   replyInputs: { [postId: number]: { username: string; content: string; show: boolean } } = {};
 
-  constructor(private apiService: ApiService, private cdr: ChangeDetectorRef) {}
+  constructor(
+    private apiService: ApiService,
+    private cdr: ChangeDetectorRef,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
 
   ngOnInit() {
-    this.loadPosts();
+    // Browser only. The whole site is prerendered at build time (app.routes.server.ts),
+    // so fetching here on the server would bake that build's posts into the shipped HTML.
+    if (isPlatformBrowser(this.platformId)) {
+      this.loadPosts();
+    }
   }
 
   loadPosts() {
