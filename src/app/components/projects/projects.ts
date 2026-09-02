@@ -142,15 +142,6 @@ export class Projects {
       githubUrl: null,
       status: 'in-development',
       highlight: true
-    },
-    {
-      title: 'Coming Soon',
-      description: 'A new project is currently in the works. Check back soon!',
-      tags: [],
-      liveUrl: null,
-      githubUrl: null,
-      status: 'coming-soon',
-      highlight: false
     }
   ];
 }
