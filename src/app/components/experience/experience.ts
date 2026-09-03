@@ -12,7 +12,7 @@ export class Experience {
     {
       title: 'Software Developer',
       company: 'ArkMed Group',
-      period: '2021 — 2026',
+      period: '2021 - 2026',
       location: 'Remote',
       highlights: [
         'Architected and maintained secure, high-availability Practice Management Systems using C# and .NET Core, ensuring strict HIPAA compliance and zero-defect data processing.',

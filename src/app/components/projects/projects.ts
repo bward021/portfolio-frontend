@@ -73,7 +73,7 @@ export class Projects {
     },
     {
       title: 'Cairn - Community for Autism Parents',
-      description: 'A calm-by-design community platform for parents of autistic children, with autistic adults welcomed as peers. Better Auth (email/password + Google OAuth) with adults-only attestation enforced at the database boundary, threaded posts with R2 image attachments and a five-reaction set surfaced via natural-language reactor lines, report-with-reason moderation with banned-term and crisis-signal scanners, friction-gated 1:1 DMs that require mutual engagement, topic/age/region groups with scoped moderators, in-context language nudges that link to long-form explainers, and an admin broadcast composer with per-recipient personalization. Polling-based real-time, deliberately — no WebSockets.',
+      description: 'A calm-by-design community platform for parents of autistic children, with autistic adults welcomed as peers. Better Auth (email/password + Google OAuth) with adults-only attestation enforced at the database boundary, threaded posts with R2 image attachments and a five-reaction set surfaced via natural-language reactor lines, report-with-reason moderation with banned-term and crisis-signal scanners, friction-gated 1:1 DMs that require mutual engagement, topic/age/region groups with scoped moderators, in-context language nudges that link to long-form explainers, and an admin broadcast composer with per-recipient personalization. Polling-based real-time, deliberately. No WebSockets.',
       tags: ['Next.js', 'React 19', 'TypeScript', 'Prisma', 'PostgreSQL', 'Better Auth', 'Cloudflare R2', 'Upstash Redis', 'Resend', 'Vercel'],
       liveUrl: 'https://cairn.community',
       githubUrl: null,
